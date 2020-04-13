@@ -1,4 +1,4 @@
-# Remediating from cyber security incidents 
+# Remediating from major cyber security incidents 
 
 Planning and mobilising programmes to deliver such rapid risk reduction.
 
@@ -33,7 +33,7 @@ Effective remediation events need to be planned and coordinated.
 - [ ] Playbooks and red line criteria have been written to respond to any new attacker activity identified 
 - [ ] Response actions have been documented (e.g., blockings IPs, sinkholing DNS, resetting accounts and isolating systems)
 
-### Example "Eradication event criteria"
+## Example "Eradication event criteria"
 - [ ] We are confident all attacker access has been identified (e.g. malware, command and control methods, compromised accounts)
 - [ ] We are confident all current attacker activity is being detected
 - [ ] We are confident any new attacker activity will be detected
@@ -42,7 +42,7 @@ Effective remediation events need to be planned and coordinated.
 - [ ] Key activities from plans have been tested
 - [ ] Business impact assessed and managed  
 
-# Remediating external attacks against enterprise IT environments
+# Remediating external cyber attacks
 
 Checklist of key actions to take organised around remediation objectives (by no means comprehensive, but I find these a helpful list of actions to sense check plans!)
 
