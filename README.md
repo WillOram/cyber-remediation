@@ -10,7 +10,7 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 
 ## Remediating external attacks against legacy enterprise IT environments
 
-Checklist of key actions to take, by no means comprehensive! 
+Checklist of key actions to take. This is by no means comprehensive, but I find these a helpful list of actions! 
 
 The following actions cannot be taken in isolation to be effective, they require mature capabilities to design, implement and operate them. 
 
@@ -71,6 +71,7 @@ To be effective remediation events need to be planned and coordinated.
 - [ ] Roll out multi-factor authentication for all authentication to remote access systems (e.g. VPN)
 - [ ] Roll out multi-factor authentication for all authentication for third-party vendor access 
 - [ ] Prevent users from setting weak passwords (e.g. by deploying Azure AD Password protect)
+- [ ] Disable legacy and unused authentication protocols
 
 ## Detect the attacker if they re-gain access to the environment 
 
@@ -89,3 +90,32 @@ To be effective remediation events need to be planned and coordinated.
 
 ## Limit the attacker’s ability to achieve any objectives if access to the environment is reacquired
 
+### Esclate privileges
+- [ ] Remove administrator rights from standard users on workstations
+- [ ] Remediate vulnerabilities on workstation and server builds 
+- [ ] Use a local admin password solution to set strong passwords for all local admin accounts on workstations and servers  - [ ] Audit and identify owners for all Active Directory accounts 
+- [ ] Set strong passwords on all service accounts, domain administrator accounts and priviliged accounts 
+- [ ] Prevent domain administrator accounts from logging into servers and workstations 
+- [ ] Prevent standard user accounts from being able to log into servers 
+- [ ] Enforce the use of dedicated for administration and not shared between users
+- [ ] Deploy privilged access management (PAM) tooling to enforce multi-factor authentication for the use of admin accounts 
+- [ ] Ensure that domain admin accounts are only used on hardened administration systems or within PAM session management 
+- [ ] Limit the accounts in the local administrator groups of workstations and servers
+- [ ] Limit the accounts in the remote desktop groups of workstations and servers
+- [ ] Restrict how service accounts accounts are used
+- [ ] Implement Windows ATA / Azure ATP to detect and respond to advanced attacks on AD and its identities.
+
+### Move laterally
+- [ ] Limit what workstations can access on the internal network 
+- [ ] Detect anomalous use of user accounts for remote access
+- [ ] Detect anomalous use of administrator and service accounts
+- [ ] Patch vulnerabilities on endpoints, applications and appliances and segmenting systems that can not be patched;
+- [ ] Restrict access to high-risk networks with bastion hosts
+- [ ] Limit network access to systems and databases hosting critical applications
+
+### Compromise sensitive data 
+- [ ] Deploy tooling to enforce multi factor authentication for access to critical applications
+- [ ] Remove sensitive data stored in information shares accessible to standard users
+- [ ] Restrict access to open network shares and other potentially sensitive data stores (e.g., Intranet, internal wikis, and file servers)
+- [ ] Deploy data loss prevention (DLP) tooling to prevent exfiltration of sensitive data
+- [ ] Restrict servers access to the internet to whitelisted services 
