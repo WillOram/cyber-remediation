@@ -12,18 +12,18 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 
 Checklist of key actions to take, by no means comprehensive! 
 
-Taking the folllowing actions in isolation and require mature capabilities to design, implement and operate them. 
+The folllowing actions can not be taken in isolation to be effective, they require mature capabilities to design, implement and operate them. 
 
-## Planning for a remediation event 
+# Planning for a remediation event 
 
-### Removing known attacker access to the environment 
+## Removing known attacker access to the environment 
 - [ ] Remove malware
 - [ ] Block known bad IPs
 - [ ] Block known bad domains
 - [ ] Block known bad hashes from executing
 - [ ] Reset known compromised accounts
 
-### Removing unknown attacker access to the environment 
+## Removing unknown attacker access to the environment 
 - [ ] Decomission, rebuild or restart compromised systems
 - [ ] Scan external facing systems for webshells (YARA or threat hunting for modified files)
 - [ ] Check for mail-forwarding rules configured on email server / systems
@@ -32,9 +32,9 @@ Taking the folllowing actions in isolation and require mature capabilities to de
 - [ ] Reset service account passwords 
 - [ ] Reset user account passwords
 
-### Prevent the attacker from re-gaining access to the environment
+## Prevent the attacker from re-gaining access to the environment
 
-#### External vulnerabilities being exploited 
+### External vulnerabilities being exploited 
 - [ ] Remediate vulnerabilities on external-facing systems and services 
 - [ ] Remediate vulnerabilities on external-facing web applications 
 - [ ] Setup alerting for new external vulnerabilities / services (e.g. Tenable.io)
@@ -43,7 +43,7 @@ Taking the folllowing actions in isolation and require mature capabilities to de
 - [ ] Penetration test external-facing systems and services 
 - [ ] Penetration test external-facing web applications
 
-#### Phishing attacks  
+### Phishing attacks  
 - [ ] Configure email filtering tools to whitelist file-types users can receive in email attachments
 - [ ] Configure web filtering tools to restrict file-types users can download from the internet
 - [ ] Prevent untrusted Microsoft Office macros from being run by users on workstations 
@@ -53,7 +53,7 @@ Taking the folllowing actions in isolation and require mature capabilities to de
 - [ ] Deploy tooling so that it is easy for employees to report suspicious emails 
 - [ ] Deploy / upgrade AV to ensure common commodity malware infections are prevented and contained
 
-#### Weak or compromised credentials being exploited 
+### Weak or compromised credentials being exploited 
 - [ ] Roll out multi-factor authentication for all authentication to external-facing / cloud applications (e.g. email, Salesforce)
 - [ ] Roll out multi-factor authentication for all authentication to remote access systems (e.g. VPN)
 - [ ] Roll out multi-factor authentication for all authentication for third-party vendor access 
