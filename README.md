@@ -34,12 +34,13 @@ Effective remediation events need to be planned and coordinated.
 - [ ] Response actions have been documented (e.g., blockings IPs, sinkholing DNS, resetting accounts and isolating systems)
 
 ## Example "Eradication event criteria"
-- [ ] We are confident all attacker access has been identified (e.g. malware, command and control methods, compromised accounts)
-- [ ] We are confident all current attacker activity is being detected
-- [ ] We are confident any new attacker activity will be detected
+- [ ] Confident all attacker access has been identified (e.g. malware, command and control methods, compromised accounts)
 - [ ] Attacker TTPs are consistent, understood and not changing 
+- [ ] Confident all current attacker activity is being detected
+- [ ] Confident any new attacker activity will be detected
+- [ ] Confident we have the ability to response quickly to any new attacker activity 
 - [ ] Plans have been developed to carry out eradication event activities and resources identified
-- [ ] Key activities from plans have been tested
+- [ ] Key activities from plans have been documented and tested
 - [ ] Business impact assessed and managed  
 
 # Remediating external cyber attacks
