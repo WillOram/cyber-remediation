@@ -79,7 +79,7 @@ To be effective remediation events need to be planned and coordinated.
 - [ ] Deploy an advance endpoint agent (EPP/EDR) to detect suspicious activity on all systems using behavioural analytics
 - [ ] Add rules to endpoint agent (EPP/EDR) to detect the tools and techniques commonly used by the attackers
 - [ ] Collect and monitor logs from servers (WEVTs with enhanced configuration, Sysmon) and security tooling
-- [ ] Deploy / upgrade AV to ensure AMSI capabilties to detect malicious use of PowerShell 
+- [ ] Deploy / upgrade AV to ensure AMSI capabilities to detect malicious use of PowerShell 
 - [ ] Deploy file integrity monitoring on web servers to detect web shells and malicious code 
 
 ### Detect command and control traffic
@@ -90,26 +90,26 @@ To be effective remediation events need to be planned and coordinated.
 
 ## Limit the attacker’s ability to achieve any objectives if access to the environment is reacquired
 
-### Esclate privileges
+### Escalate privileges
 - [ ] Remove administrator rights from standard users on workstations
 - [ ] Remediate vulnerabilities on workstation and server builds 
 - [ ] Use a local admin password solution to set strong passwords for all local admin accounts on workstations and servers  - [ ] Audit and identify owners for all Active Directory accounts 
-- [ ] Set strong passwords on all service accounts, domain administrator accounts and priviliged accounts 
+- [ ] Set strong passwords on all service accounts, domain administrator accounts and privileged accounts 
 - [ ] Prevent domain administrator accounts from logging into servers and workstations 
 - [ ] Prevent standard user accounts from being able to log into servers 
 - [ ] Enforce the use of dedicated for administration and not shared between users
-- [ ] Deploy privilged access management (PAM) tooling to enforce multi-factor authentication for the use of admin accounts 
+- [ ] Deploy privileged access management (PAM) tooling to enforce multi-factor authentication for the use of admin accounts 
 - [ ] Ensure that domain admin accounts are only used on hardened administration systems or within PAM session management 
 - [ ] Limit the accounts in the local administrator groups of workstations and servers
 - [ ] Limit the accounts in the remote desktop groups of workstations and servers
-- [ ] Restrict how service accounts accounts are used
+- [ ] Restrict how service accounts are used
 - [ ] Implement Windows ATA / Azure ATP to detect and respond to advanced attacks on AD and its identities.
 
 ### Move laterally
 - [ ] Limit what workstations can access on the internal network 
 - [ ] Detect anomalous use of user accounts for remote access
 - [ ] Detect anomalous use of administrator and service accounts
-- [ ] Patch vulnerabilities on endpoints, applications and appliances and segmenting systems that can not be patched;
+- [ ] Patch vulnerabilities on endpoints, applications and appliances and segmenting systems that cannot be patched;
 - [ ] Restrict access to high-risk networks with bastion hosts
 - [ ] Limit network access to systems and databases hosting critical applications
 
