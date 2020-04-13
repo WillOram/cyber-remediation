@@ -8,7 +8,7 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 4. Validate and measure progress at reducing risk
 5. Address root-causes of vulnerabilities with strategic transformation programmes
 
-## Remediation bjectives
+## Remediation objectives
 
 1. Removing known attacker access to the environment 
 2. Removing unknown attacker access to the environment 
@@ -16,31 +16,30 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 4. Detect the attacker if they re-gain access to the environment 
 5. Limit the attacker’s ability to achieve any objectives if access to the environment is reacquired
 
-# Planning for a eradication event 
+# Planning for an eradication event 
 
 To be effective remediation events need to be planned and coordinated. 
 
 ## Eradication event planning checklist
 - [ ] Date identified
 - [ ] Setup out of band communications and collaboration methods
-- [ ] Eradication event criteria have been defined
-- [ ] Surged monitoring team has been stood up 
+- [ ] "Eradication event criteria" have been defined
+- [ ] Surged monitoring and response team has been stood up 
 - [ ] Playbooks, red line criteria have been written to respond to any new attacker activity identified 
 - [ ] Response actions have been documented blockings IPs, sinkholing DNS, resetting accounts and isolating systems
 
-### Example eradication event criteria
+### Example "Eradication event criteria"
 - [ ] All attacker access has been identified (e.g. malware, command and control methods, compromised accounts)
 - [ ] Attacker TTPs are consistent, understood and not changing 
 - [ ] Confident all current attacker activity is being detected
 - [ ] Confident any new attacker activity will be detected
 - [ ] Plans have been developed to carry out eradication event activities and resources identified
 - [ ] Key activities from plans have been tested
+- [ ] Business impact assessed and managed  
 
 # Remediating external attacks against legacy enterprise IT environments
 
-Checklist of key actions to take. 
-
-By no means comprehensive, but I find these a helpful list of actions to sense check plans! 
+Checklist of key actions to take (by no means comprehensive, but I find these a helpful list of actions to sense check plans!)
 
 The following actions cannot be taken in isolation to be effective, they require mature capabilities to design, implement and operate. 
 
