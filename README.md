@@ -18,6 +18,14 @@ The following actions cannot be taken in isolation to be effective, they require
 
 To be effective remediation events need to be planned and coordinated. 
 
+## Define Objectives
+
+1. Removing known attacker access to the environment 
+2. Removing unknown attacker access to the environment 
+3. Prevent the attacker from re-gaining access to the environment
+4. Detect the attacker if they re-gain access to the environment 
+5. Limit the attacker’s ability to achieve any objectives if access to the environment is reacquired
+
 ## Removing known attacker access to the environment 
 - [ ] Remove malware (executables, configuration files, temporary files, persistence methods, web shells)
 - [ ] Block known bad IPs
@@ -63,3 +71,21 @@ To be effective remediation events need to be planned and coordinated.
 - [ ] Roll out multi-factor authentication for all authentication to remote access systems (e.g. VPN)
 - [ ] Roll out multi-factor authentication for all authentication for third-party vendor access 
 - [ ] Prevent users from setting weak passwords (e.g. by deploying Azure AD Password protect)
+
+## Detect the attacker if they re-gain access to the environment 
+
+### Attacker activity on workstations or servers 
+- [ ] Deploy an advance endpoint agent (EPP/EDR) to detect suspicious activity on all systems using behavioural analytics
+- [ ] Add rules to endpoint agent (EPP/EDR) to detect the tools and techniques commonly used by the attackers
+- [ ] Collect and monitor logs from servers (WEVTs with enhanced configuration, Sysmon) and security tooling
+- [ ] Deploy / upgrade AV to ensure AMSI capabilties to detect malicious use of PowerShell 
+- [ ] Deploy file integrity monitoring on web servers to detect web shells and malicious code 
+
+### Detect command and control traffic
+- [ ] Collect and monitor logs from VPN and authentication services (Azure Sentinel)(geo, impossible logons, privileged accounts) 
+- [ ] Deploy cloud web filtering capabilities to detect and prevent malicious web traffic on-prem and off-prem (e.g. download of PowerShell scripts)
+- [ ] Restrict servers' access to the internet to whitelisted services, detect on traffic to other destinations 
+- [ ] Collect and monitor logs from firewalls, DNS servers and web proxies (Azure Sentinel)
+
+## Limit the attacker’s ability to achieve any objectives if access to the environment is reacquired
+
