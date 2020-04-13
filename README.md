@@ -10,47 +10,54 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 
 ## Remediation objectives
 
-1. Removing known attacker access to the environment 
-2. Removing unknown attacker access to the environment 
+Remediation has four key objectives:
+
+1. Removing attacker access to the environment 
 3. Prevent the attacker from re-gaining access to the environment
 4. Detect the attacker if they re-gain access to the environment 
 5. Limit the attacker’s ability to achieve any objectives if access to the environment is reacquired
 
+These four objectives are achieved by carrying out posturing, eradication and hardening. 
+
+Against a motivated and targeted attacker, failure to identify all attacker access, improve detection capabilities and carry out improvements to prevent the attacker from immediately re-gaining access to the environment, will likely result in the eradication not being successful (with the attacker maintaining access and embedding deeper in the network). 
+
 # Planning for an eradication event 
 
-To be effective remediation events need to be planned and coordinated. 
+Effective remediation events need to be planned and coordinated. 
 
 ## Eradication event planning checklist
-- [ ] Date identified
+- [ ] Identified date
 - [ ] Setup out of band communications and collaboration methods
 - [ ] "Eradication event criteria" have been defined
 - [ ] Surged monitoring and response team has been stood up 
-- [ ] Playbooks, red line criteria have been written to respond to any new attacker activity identified 
-- [ ] Response actions have been documented blockings IPs, sinkholing DNS, resetting accounts and isolating systems
+- [ ] Playbooks and red line criteria have been written to respond to any new attacker activity identified 
+- [ ] Response actions have been documented (e.g., blockings IPs, sinkholing DNS, resetting accounts and isolating systems)
 
 ### Example "Eradication event criteria"
-- [ ] All attacker access has been identified (e.g. malware, command and control methods, compromised accounts)
+- [ ] We are confident all attacker access has been identified (e.g. malware, command and control methods, compromised accounts)
+- [ ] We are confident all current attacker activity is being detected
+- [ ] We are confident any new attacker activity will be detected
 - [ ] Attacker TTPs are consistent, understood and not changing 
-- [ ] Confident all current attacker activity is being detected
-- [ ] Confident any new attacker activity will be detected
 - [ ] Plans have been developed to carry out eradication event activities and resources identified
 - [ ] Key activities from plans have been tested
 - [ ] Business impact assessed and managed  
 
-# Remediating external attacks against legacy enterprise IT environments
+# Remediating external attacks against enterprise IT environments
 
-Checklist of key actions to take (by no means comprehensive, but I find these a helpful list of actions to sense check plans!)
+Checklist of key actions to take organised around remediation objectives (by no means comprehensive, but I find these a helpful list of actions to sense check plans!)
 
 The following actions cannot be taken in isolation to be effective, they require mature capabilities to design, implement and operate. 
 
-## Removing known attacker access to the environment 
+## Removing attacker access to the environment 
+
+### Remove known access
 - [ ] Remove malware (executables, configuration files, temporary files, persistence methods, web shells)
 - [ ] Block known bad IPs
 - [ ] Block known bad domains (sinkhole?)
 - [ ] Block known bad hashes from executing
 - [ ] Reset / disable known compromised accounts
 
-## Removing unknown attacker access to the environment 
+### Remove unknown access
 - [ ] Decommission, rebuild or restart compromised systems
 - [ ] Scan external facing systems for web-shells (YARA or threat hunting for modified files)
 - [ ] Audit and remove mail-forwarding rules configured on email server / systems
