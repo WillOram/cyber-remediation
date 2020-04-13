@@ -12,25 +12,28 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 
 Checklist of key actions to take, by no means comprehensive! 
 
-The folllowing actions can not be taken in isolation to be effective, they require mature capabilities to design, implement and operate them. 
+The following actions cannot be taken in isolation to be effective, they require mature capabilities to design, implement and operate them. 
 
 # Planning for a remediation event 
 
+To be effective remediation events need to be planned and coordinated. 
+
 ## Removing known attacker access to the environment 
-- [ ] Remove malware
+- [ ] Remove malware (executables, configuration files, temporary files, persistence methods, web shells)
 - [ ] Block known bad IPs
-- [ ] Block known bad domains
+- [ ] Block known bad domains (sinkhole?)
 - [ ] Block known bad hashes from executing
 - [ ] Reset known compromised accounts
 
 ## Removing unknown attacker access to the environment 
-- [ ] Decomission, rebuild or restart compromised systems
-- [ ] Scan external facing systems for webshells (YARA or threat hunting for modified files)
-- [ ] Check for mail-forwarding rules configured on email server / systems
+- [ ] Decommission, rebuild or restart compromised systems
+- [ ] Scan external facing systems for web-shells (YARA or threat hunting for modified files)
+- [ ] Audit and remove mail-forwarding rules configured on email server / systems
 - [ ] Reset administrator account passwords
 - [ ] Reset privileged account passwords 
 - [ ] Reset service account passwords 
 - [ ] Reset user account passwords
+- [ ] Audit MFA tokens issued
 
 ## Prevent the attacker from re-gaining access to the environment
 
@@ -38,18 +41,20 @@ The folllowing actions can not be taken in isolation to be effective, they requi
 - [ ] Remediate vulnerabilities on external-facing systems and services 
 - [ ] Remediate vulnerabilities on external-facing web applications 
 - [ ] Setup alerting for new external vulnerabilities / services (e.g. Tenable.io)
-- [ ] Decomission external-facing legacy systems
 - [ ] Audit all external-facing systems and services 
+- [ ] Decommission external-facing legacy systems
 - [ ] Penetration test external-facing systems and services 
 - [ ] Penetration test external-facing web applications
 
 ### Phishing attacks  
-- [ ] Configure email filtering tools to whitelist file-types users can receive in email attachments
-- [ ] Configure web filtering tools to restrict file-types users can download from the internet
+- [ ] Configure email filtering tools to whitelist file-types users can receive in email attachments and scan files for malicious content 
+- [ ] Configure web filtering tools to restrict file-types users can download from the internet and scan files for malicious content 
+- [ ] Configure web filtering tools to block domains registered within the last two weeks
 - [ ] Prevent untrusted Microsoft Office macros from being run by users on workstations 
-- [ ] Restrict scripts that can be executed on workstations (e.g. PowerShell, HTA, and CHM files) 
+- [ ] Restrict the use of PowerShell on workstations
+- [ ] Restrict scripts files that can be executed on workstations (e.g. HTA, and CHM files) 
 - [ ] Restrict executables that can be executed on workstations (e.g. based on location, trust, whitelisting)
-- [ ] Deploy tooling to detect and block / flag suspicious emails using advanced analytics
+- [ ] Deploy tooling to detect and block / flag suspicious emails using advanced analytics (e.g. O365 ATP)
 - [ ] Deploy tooling so that it is easy for employees to report suspicious emails 
 - [ ] Deploy / upgrade AV to ensure common commodity malware infections are prevented and contained
 
