@@ -53,7 +53,7 @@ The following actions cannot be taken in isolation to be effective, they require
 
 ### Remove known access
 - [ ] Remove malware (executables, configuration files, temporary files, persistence methods, web shells)
-- [ ] Block known bad IPs
+- [ ] Block known bad IPs (onprem / offprem)
 - [ ] Block known bad domains (sinkhole?)
 - [ ] Block known bad hashes from executing
 - [ ] Reset / disable known compromised accounts
@@ -62,10 +62,10 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Decommission, rebuild or restart compromised systems
 - [ ] Scan external facing systems for web-shells (YARA or threat hunting for modified files)
 - [ ] Audit and remove mail-forwarding rules configured on email server / systems
-- [ ] Reset administrator account passwords
+- [ ] Reset administrator account passwords (+ golden ticket)
 - [ ] Reset privileged account passwords 
 - [ ] Reset service account passwords 
-- [ ] Reset user account passwords
+- [ ] Reset user account passwords (change on next logon?)
 - [ ] Audit MFA tokens issued
 
 ## Prevent the attacker from re-gaining access to the environment
