@@ -40,6 +40,7 @@ These four objectives are achieved by carrying out posturing, eradication and ha
 
 ### Containment 
 - Reactively take actions to prevent the attacker compromising critical assets, taking destructive actions or stealing sensitive data.  
+
 Against a motivated and targeted attacker failure to perform each of the following, will likely result in the eradication not being successful (with the attacker maintaining access and embedding deeper in the network):
 - identify all attacker access; 
 - improve detection capabilities; and,
