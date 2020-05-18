@@ -14,8 +14,7 @@ Remediation has five key objectives:
 1. Remove attacker access to the environment
 2. Gain confidence the attacker no longer has access to the environment
 3. Prevent the attacker from re-gaining access to the environment 
-4. Ensure the attacker is detected if they re-gain access to the environment
-5. Ensure the attacker is prevented from achieving their objectives if they re-gain access to the environment
+4. Ensure even if the attacker re-gains access, their actions are detected and they are prevented from reaching their objectives 
 
 These five objectives are achieved by carrying out posturing, eradication and hardening, with additional containment actions if required. 
 
