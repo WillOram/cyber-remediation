@@ -10,16 +10,41 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 
 ## Remediation objectives
 
-Remediation has four key objectives:
+Remediation has five key objectives:
+1. Remove attacker access to the environment
+2. Gain confidence the attacker no longer has access to the environment
+3. Prevent the attacker from re-gaining access to the environment 
+4. Ensure the attacker is detected if they re-gain access to the environment
+5. Ensure the attacker is prevented from achieving their objectives if they re-gain access to the environment
 
-1. Removing attacker access to the environment 
-3. Prevent the attacker from re-gaining access to the environment
-4. Detect the attacker if they re-gain access to the environment 
-5. Limit the attacker’s ability to achieve any objectives if access to the environment is reacquired
+These five objectives are achieved by carrying out posturing, eradication and hardening, with additional containment actions if required. 
 
-These four objectives are achieved by carrying out posturing, eradication and hardening. 
+### Posturing
+- Rapidly improve detect and response capabilities
+- Map out attack paths used by the attacker and identify targeted improvements
+- Prepare for reactive containment actions if required 
+- Prepare for an ‘eradication event’ to remove the attacker from the environment
+- Implement early any planned improvements that will not tip-off the attacker
 
-Against a motivated and targeted attacker, failure to identify all attacker access, improve detection capabilities and carry out improvements to prevent the attacker from immediately re-gaining access to the environment, will likely result in the eradication not being successful (with the attacker maintaining access and embedding deeper in the network). 
+### Eradication 
+- Remove attacker access to the environment in a single coordinated event
+- Prevent the attacker from quickly re-gaining access to the environment by:
+  - using the same or similar attacks (if it was identified how the attacker initially gained access)
+  - using other common methods (e.g. phishing, compromised credentials)
+- Prevent the attacker using the same or similar attack paths to reach their objectives (e.g. segmenting POS terminals)
+
+### Hardening 
+- Reduce risk of further repeat attacks by the attacker in the short- / medium-term by delivering tactical improvements targeted at: 
+  - Preventing the attacker from re-gaining access to the environment
+  - Detecting the attacker if they re-gain access to the environment
+  - Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
+
+### Containment 
+- Reactively take actions to prevent the attacker compromising critical assets, taking destructive actions or stealing sensitive data.  
+Against a motivated and targeted attacker failure to perform each of the following, will likely result in the eradication not being successful (with the attacker maintaining access and embedding deeper in the network):
+- identify all attacker access; 
+- improve detection capabilities; and,
+- implement sufficient improvements to prevent the attacker from quickly re-gaining access to the environment. 
 
 # Planning for an eradication event 
 
@@ -113,7 +138,7 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Restrict servers' access to the internet to whitelisted services, detect on traffic to other destinations 
 - [ ] Collect and monitor logs from firewalls, DNS servers and web proxies (Azure Sentinel)
 
-## Limit the attacker’s ability to achieve any objectives if access to the environment is reacquired
+## Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
 
 ### Escalate privileges
 - [ ] Remove administrator rights from standard users on workstations
