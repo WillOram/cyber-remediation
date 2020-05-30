@@ -2,6 +2,23 @@ Hi, my name is [Will Oram](https://willoram.com/). I’m a cyber security consul
 
 # Remediating from major cyber security incidents 
 
+[Remediation objectives](#remediation-objectives)  
+[Remediation steps](#remediation-steps)  
+* [Uplift detection capabilities](#uplift-detection-capabilities)  
+* [Harden the environment](#harden-the-environment)  
+* [Plan "eradication event"](#plan--eradication-event-)  
+* [Execute "eradication event"](#execute--eradication-event-)  
+* [Deliver tactical improvements](#deliver-tactical-improvements)  
+
+[Key considerations for remediating from an incident](#key-considerations-for-remediating-from-an-incident)  
+[Planning for an eradication event](#planning-for-an-eradication-event)  
+[Key considerations for delivering tactical improvements](#key-considerations-for-delivering-tactical-improvements)  
+[Checklist for remediating from external cyber attacks](#checklist-for-remediating-from-external-cyber-attacks)  
+* [Removing attacker access to the environment](#removing-attacker-access-to-the-environment)  
+* [Prevent the attacker from re-gaining access to the environment](#prevent-the-attacker-from-re-gaining-access-to-the-environment)  
+* [Detect the attacker if they re-gain access to the environment](#detect-the-attacker-if-they-re-gain-access-to-the-environment)  
+* [Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment](#limiting-the-attacker-s-ability-to-achieve-their-objectives-if-they-re-gain-access-to-the-environment)  
+    
 ## Remediation objectives
 
 Remediation has three key objectives:
@@ -64,7 +81,7 @@ Effective remediation events need to be planned and coordinated.
 - [ ] Playbooks and red line criteria have been written to respond to any new attacker activity identified 
 - [ ] Response actions have been documented (e.g., blockings IPs, sinkholing DNS, resetting accounts and isolating systems)
 
-## Example "Eradication event criteria"
+### Developing an "Eradication event criteria"
 - [ ] Confident all attacker access has been identified (e.g. malware, command and control methods, compromised accounts)
 - [ ] Attacker TTPs are consistent, understood and not changing 
 - [ ] Confident all current attacker activity is being detected
