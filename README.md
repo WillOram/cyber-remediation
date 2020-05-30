@@ -4,17 +4,16 @@ Hi, my name is [Will Oram](https://willoram.com/). I’m a cyber security consul
 
 [Remediation objectives](#remediation-objectives)  
 [Remediation steps](#remediation-steps)  
-* [Uplift detection capabilities](#uplift-detection-capabilities)  
-* [Harden the environment](#harden-the-environment)  
-* [Plan "eradication event"](#plan--eradication-event-)  
-* [Execute "eradication event"](#execute--eradication-event-)  
-* [Deliver tactical improvements](#deliver-tactical-improvements)  
-
+1. [Uplift detection capabilities](#uplift-detection-capabilities)  
+2. [Harden the environment](#harden-the-environment)  
+3. [Plan "eradication event"](#plan--eradication-event-)  
+4. [Execute "eradication event"](#execute--eradication-event-)  
+5. [Deliver tactical improvements](#deliver-tactical-improvements)  
 [Key considerations for remediating from an incident](#key-considerations-for-remediating-from-an-incident)  
 [Planning for an eradication event](#planning-for-an-eradication-event)  
-[Key considerations for delivering tactical improvements](#key-considerations-for-delivering-tactical-improvements)  
+[Removing attacker access to the environment](#removing-attacker-access-to-the-environment)  
+[Key considerations for delivering tactical improvements](#key-considerations-for-delivering-tactical-improvements) 
 [Checklist for remediating from external cyber attacks](#checklist-for-remediating-from-external-cyber-attacks)  
-* [Removing attacker access to the environment](#removing-attacker-access-to-the-environment)  
 * [Prevent the attacker from re-gaining access to the environment](#prevent-the-attacker-from-re-gaining-access-to-the-environment)  
 * [Detect the attacker if they re-gain access to the environment](#detect-the-attacker-if-they-re-gain-access-to-the-environment)  
 * [Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment](#limiting-the-attacker-s-ability-to-achieve-their-objectives-if-they-re-gain-access-to-the-environment)  
@@ -91,22 +90,6 @@ Effective remediation events need to be planned and coordinated.
 - [ ] Key activities from plans have been documented and tested
 - [ ] Business impact assessed and managed  
 
-## Key considerations for delivering tactical improvements 
-
-Planning and mobilising programmes to deliver such rapid risk reduction.
-
-1. Understand the organisation’s vulnerability to the threat (attack path analysis)
-2. Identify pragmatic and threat-focused actions to remediate vulnerabilities
-3. Develop and deliver a programme focused on rapid risk reduction
-4. Validate and measure progress at reducing risk
-5. Address root-causes of vulnerabilities with strategic transformation programmes
-
-### Checklist for remediating from external cyber attacks 
-
-Checklist of key actions to take organised around remediation objectives (by no means comprehensive, but I find these a helpful list of actions to sense check plans!)
-
-The following actions cannot be taken in isolation to be effective, they require mature capabilities to design, implement and operate. 
-
 ## Removing attacker access to the environment 
 
 ### Remove known access
@@ -126,9 +109,25 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Reset user account passwords (change on next logon?)
 - [ ] Audit MFA tokens issued
 
-## Prevent the attacker from re-gaining access to the environment
+## Key considerations for delivering tactical improvements 
 
-### External vulnerabilities being exploited 
+Planning and mobilising programmes to deliver such rapid risk reduction.
+
+1. Understand the organisation’s vulnerability to the threat (attack path analysis)
+2. Identify pragmatic and threat-focused actions to remediate vulnerabilities
+3. Develop and deliver a programme focused on rapid risk reduction
+4. Validate and measure progress at reducing risk
+5. Address root-causes of vulnerabilities with strategic transformation programmes
+
+## Checklist for remediating from external cyber attacks 
+
+Checklist of key actions to take organised around remediation objectives (by no means comprehensive, but I find these a helpful list of actions to sense check plans!)
+
+The following actions cannot be taken in isolation to be effective, they require mature capabilities to design, implement and operate. 
+
+### Prevent the attacker from re-gaining access to the environment
+
+#### External vulnerabilities being exploited 
 - [ ] Remediate vulnerabilities on external-facing systems and services 
 - [ ] Remediate vulnerabilities on external-facing web applications 
 - [ ] Setup alerting for new external vulnerabilities / services (e.g. Tenable.io)
@@ -137,7 +136,7 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Penetration test external-facing systems and services 
 - [ ] Penetration test external-facing web applications
 
-### Phishing attacks  
+#### Phishing attacks  
 - [ ] Configure email filtering tools to whitelist file-types users can receive in email attachments and scan files for malicious content 
 - [ ] Configure web filtering tools to restrict file-types users can download from the internet and scan files for malicious content 
 - [ ] Configure web filtering tools to block domains registered within the last two weeks
@@ -149,31 +148,31 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Deploy tooling so that it is easy for employees to report suspicious emails 
 - [ ] Deploy / upgrade AV to ensure common commodity malware infections are prevented and contained
 
-### Weak or compromised credentials being exploited 
+#### Weak or compromised credentials being exploited 
 - [ ] Roll out multi-factor authentication for all authentication to external-facing / cloud applications (e.g. email, Salesforce)
 - [ ] Roll out multi-factor authentication for all authentication to remote access systems (e.g. VPN)
 - [ ] Roll out multi-factor authentication for all authentication for third-party vendor access 
 - [ ] Prevent users from setting weak passwords (e.g. by deploying Azure AD Password protect)
 - [ ] Disable legacy and unused authentication protocols
 
-## Detect the attacker if they re-gain access to the environment 
+### Detect the attacker if they re-gain access to the environment 
 
-### Attacker activity on workstations or servers 
+#### Attacker activity on workstations or servers 
 - [ ] Deploy an advance endpoint agent (EPP/EDR) to detect suspicious activity on all systems using behavioural analytics
 - [ ] Add rules to endpoint agent (EPP/EDR) to detect the tools and techniques commonly used by the attackers
 - [ ] Collect and monitor logs from servers (WEVTs with enhanced configuration, Sysmon) and security tooling
 - [ ] Deploy / upgrade AV to ensure AMSI capabilities to detect malicious use of PowerShell 
 - [ ] Deploy file integrity monitoring on web servers to detect web shells and malicious code 
 
-### Detect command and control traffic
+#### Detect command and control traffic
 - [ ] Collect and monitor logs from VPN and authentication services (Azure Sentinel)(geo, impossible logons, privileged accounts) 
 - [ ] Deploy cloud web filtering capabilities to detect and prevent malicious web traffic on-prem and off-prem (e.g. download of PowerShell scripts)
 - [ ] Restrict servers' access to the internet to whitelisted services, detect on traffic to other destinations 
 - [ ] Collect and monitor logs from firewalls, DNS servers and web proxies (Azure Sentinel)
 
-## Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
+### Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
 
-### Escalate privileges
+#### Escalate privileges
 - [ ] Remove administrator rights from standard users on workstations
 - [ ] Remediate vulnerabilities on workstation and server builds 
 - [ ] Use a local admin password solution to set strong passwords for all local admin accounts on workstations and servers  - [ ] Audit and identify owners for all Active Directory accounts 
@@ -188,7 +187,7 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Restrict how service accounts are used
 - [ ] Implement Windows ATA / Azure ATP to detect and respond to advanced attacks on AD and its identities.
 
-### Move laterally
+#### Move laterally
 - [ ] Limit what workstations can access on the internal network 
 - [ ] Detect anomalous use of user accounts for remote access
 - [ ] Detect anomalous use of administrator and service accounts
@@ -196,7 +195,7 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Restrict access to high-risk networks with bastion hosts
 - [ ] Limit network access to systems and databases hosting critical applications
 
-### Compromise sensitive data 
+#### Compromise sensitive data 
 - [ ] Deploy tooling to enforce multi factor authentication for access to critical applications
 - [ ] Remove sensitive data stored in information shares accessible to standard users
 - [ ] Restrict access to open network shares and other potentially sensitive data stores (e.g., Intranet, internal wikis, and file servers)
