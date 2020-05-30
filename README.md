@@ -20,6 +20,7 @@ Quick-reference notes I use when remediating from major cyber incidents. Loosely
 
 ## Delivering tactical improvements 
 [Key considerations for delivering tactical improvements](#key-considerations-for-delivering-tactical-improvements)  
+[Top ways attackers gain initial access](#top-ways-attackers-gain-initial-access)  
 [Checklist for remediating from external cyber attacks](#checklist-for-remediating-from-external-cyber-attacks)   
 1. [Prevent the attacker from re-gaining access to the environment](#prevent-the-attacker-from-re-gaining-access-to-the-environment)  
 2. [Detect the attacker if they re-gain access to the environment](#detect-the-attacker-if-they-re-gain-access-to-the-environment)  
@@ -135,6 +136,16 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 - IT hygiene (e.g. patch workstations and servers, deploy LAPS)
 - Security tooling deployment (e.g. deploy EDR, deploy Azure ATP, deploy Windows Defender ATP)
 - Detection uplift (e.g. onboard Windows Event logs to SIEM, write custom detection rules, write detection alert playbooks)
+
+## Top ways attackers gain initial access
+
+1. Phishing attacks
+
+2. Leveraging compromised credentials 
+
+3. Exploiting external vulnerabilities / misconfigurations
+
+4. Supply-chain 
 
 ## Checklist for remediating from external cyber attacks 
 
