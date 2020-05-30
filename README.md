@@ -49,6 +49,7 @@ Against a motivated and targeted attacker failure to perform each of the followi
 - Key to understanding all access the attacker has to the environment before the eradication event
 - Key to gaining confidence the attacker no longer has access to the environment after the eradication event
 - Often requires deploying new tooling to gain visibility of systems the attacker compromised 
+- Develop detection and response plans and playbooks 
 
 ### Harden the environment 
 - Map out attack paths used by the attacker and weaknesses in the environment 
@@ -56,6 +57,7 @@ Against a motivated and targeted attacker failure to perform each of the followi
   - using the same or similar attacks to gain initial access (e.g. patching external vulnerabilities)
   - using other common methods (e.g. phishing, compromised credentials)
 - Identify targeted improvements to prevent the attacker achieving their objectives using the same or similar attack paths  if they re-gain access to the environment(e.g. segmenting POS terminals)
+- Focus on quick-win improvements and identifying pragmatic actions 
 - Plan and implement any improvements that will not tip-off the attacker  
 - Plan to implement all other hardening activities during the eradication event 
 
@@ -67,6 +69,7 @@ Against a motivated and targeted attacker failure to perform each of the followi
 ### Execute "eradication event"
 - Remove attacker access to the environment in a single coordinated event (known and unknown) 
 - Perform remaining hardening activities during the eradication event 
+- Be ready to react quickly if any attacker access to the enviornment was overlooked, or if the attacker quickly re-gains access (e.g. using developed detection and response plans and playbooks)
 
 ### Deliver tactical improvements 
 - Reduce risk of further repeat attacks by the attacker in the short- / medium-term by delivering tactical improvements
@@ -74,6 +77,7 @@ Against a motivated and targeted attacker failure to perform each of the followi
   - Preventing the attacker from re-gaining access to the environment
   - Detecting the attacker if they re-gain access to the environment
   - Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
+- Feed requirements into strategic cyber security programmes / IT modernisation plans 
 
 # Executing eradication events 
 
