@@ -15,9 +15,9 @@ Hi, my name is [Will Oram](https://willoram.com/). I’m a cyber security consul
 [Removing attacker access to the environment](#removing-attacker-access-to-the-environment)  
 [Key considerations for delivering tactical improvements](#key-considerations-for-delivering-tactical-improvements)  
 [Checklist for remediating from external cyber attacks](#checklist-for-remediating-from-external-cyber-attacks)   
-* [Prevent the attacker from re-gaining access to the environment](#prevent-the-attacker-from-re-gaining-access-to-the-environment)  
-* [Detect the attacker if they re-gain access to the environment](#detect-the-attacker-if-they-re-gain-access-to-the-environment)  
-* [Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment](#limiting-the-attacker-s-ability-to-achieve-their-objectives-if-they-re-gain-access-to-the-environment)  
+1. [Prevent the attacker from re-gaining access to the environment](#prevent-the-attacker-from-re-gaining-access-to-the-environment)  
+2. [Detect the attacker if they re-gain access to the environment](#detect-the-attacker-if-they-re-gain-access-to-the-environment)  
+3. [Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment](#limiting-the-attacker-s-ability-to-achieve-their-objectives-if-they-re-gain-access-to-the-environment)  
     
 ## Remediation objectives
 
