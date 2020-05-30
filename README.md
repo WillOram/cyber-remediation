@@ -7,7 +7,7 @@ Quick-reference notes I use when remediating from major cyber incidents. Loosely
 ## Performing successful remediations 
 [Remediation objectives](#remediation-objectives)  
 [Key considerations](#key-considerations)  
-[Remediation steps](#remediation-steps)  
+[Five remediation steps](#five-remediation-steps)  
 1. [Uplift detection capabilities](#uplift-detection-capabilities)  
 2. [Harden the environment](#harden-the-environment)  
 3. [Plan "eradication event"](#plan--eradication-event-)  
@@ -41,9 +41,7 @@ Against a motivated and targeted attacker failure to perform each of the followi
 - improve detection capabilities so that all attacker activity is detected; and,
 - implement sufficient improvements to prevent the attacker from quickly re-gaining access to the environment. 
 
-## Remediation steps
-
-Key remediation steps:
+## Five remediation steps
 
 ### Uplift detection capabilities 
 - Rapidly improve detect and response capabilities so that all attacker activity is promptly detected
