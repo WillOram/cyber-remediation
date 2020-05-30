@@ -2,7 +2,11 @@ Hi, my name is [Will Oram](https://willoram.com/). I’m a cyber security consul
 
 # Remediating from major cyber security incidents 
 
+Quick-reference notes I use when remediating from major cyber incidents. Loosely organised into three sections.
+
+## Performing successful remediations 
 [Remediation objectives](#remediation-objectives)  
+[Key considerations](#key-considerations)  
 [Remediation steps](#remediation-steps)  
 1. [Uplift detection capabilities](#uplift-detection-capabilities)  
 2. [Harden the environment](#harden-the-environment)  
@@ -10,9 +14,11 @@ Hi, my name is [Will Oram](https://willoram.com/). I’m a cyber security consul
 4. [Execute "eradication event"](#execute--eradication-event-)  
 5. [Deliver tactical improvements](#deliver-tactical-improvements)  
 
-[Key considerations for remediating from an incident](#key-considerations-for-remediating-from-an-incident)  
+## Executing eradication events 
 [Planning for an eradication event](#planning-for-an-eradication-event)  
 [Removing attacker access to the environment](#removing-attacker-access-to-the-environment)  
+
+## Delivering tactical improvements 
 [Key considerations for delivering tactical improvements](#key-considerations-for-delivering-tactical-improvements)  
 [Checklist for remediating from external cyber attacks](#checklist-for-remediating-from-external-cyber-attacks)   
 1. [Prevent the attacker from re-gaining access to the environment](#prevent-the-attacker-from-re-gaining-access-to-the-environment)  
@@ -25,6 +31,13 @@ Remediation has three key objectives:
 1. Remove the attacker’s access to the environment 
 2. Provide confidence the attacker no longer has access to the environment 
 3. Prevent the attacker from re-gaining access to the environment and achieving their objectives 
+
+## Key considerations
+
+Against a motivated and targeted attacker failure to perform each of the following, will likely result in the eradication not being successful (with the attacker maintaining access and embedding deeper in the network):
+- identify all attacker access; 
+- improve detection capabilities so that all attacker activity is detected; and,
+- implement sufficient improvements to prevent the attacker from quickly re-gaining access to the environment. 
 
 ## Remediation steps
 
@@ -60,13 +73,6 @@ Key remediation steps:
   - Preventing the attacker from re-gaining access to the environment
   - Detecting the attacker if they re-gain access to the environment
   - Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
-
-## Key considerations for remediating from an incident 
-
-Against a motivated and targeted attacker failure to perform each of the following, will likely result in the eradication not being successful (with the attacker maintaining access and embedding deeper in the network):
-- identify all attacker access; 
-- improve detection capabilities so that all attacker activity is detected; and,
-- implement sufficient improvements to prevent the attacker from quickly re-gaining access to the environment. 
 
 ## Planning for an eradication event 
 
