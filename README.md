@@ -1,56 +1,62 @@
+Hi, my name is [Will Oram](https://willoram.com/). I’m a cyber security consultant living in London. You can follow me on [Twitter](https://twitter.com/willoram). I help companies respond to cyber security breaches and prevent cyber attacks. I also tweet and blog about cyber security, and maintain this collection of resources for [managing](https://github.com/WillOram/cyber-incident-management) and [remediating](https://github.com/WillOram/cyber-remediation) from cyber security breaches. 
+
 # Remediating from major cyber security incidents 
-
-Planning and mobilising programmes to deliver such rapid risk reduction.
-
-1. Understand the organisation’s vulnerability to the threat (attack path analysis)
-2. Identify pragmatic and threat-focused actions to remediate vulnerabilities
-3. Develop and deliver a programme focused on rapid risk reduction
-4. Validate and measure progress at reducing risk
-5. Address root-causes of vulnerabilities with strategic transformation programmes
 
 ## Remediation objectives
 
-Remediation has four key objectives:
-1. Remove attacker access to the environment
-2. Gain confidence the attacker no longer has access to the environment
-3. Prevent the attacker from re-gaining access to the environment 
-4. Ensure even if the attacker re-gains access, their actions are detected and they are prevented from reaching their objectives 
+Remediation has three key objectives:
+1. Remove the attacker’s access to the environment 
+2. Provide confidence the attacker no longer has access to the environment 
+3. Prevent the attacker from re-gaining access to the environment and achieving their objectives 
 
-These four objectives are achieved by carrying out posturing, eradication and hardening, with additional containment actions if required. 
+## Remediation steps
 
-### Posturing
-- Rapidly improve detect and response capabilities
-- Map out attack paths used by the attacker and identify targeted improvements
-- Prepare for reactive containment actions if required 
+Key remediation steps:
+
+### Uplift detection capabilities 
+- Rapidly improve detect and response capabilities so that all attacker activity is promptly detected
+- Key to understanding all access the attacker has to the environment before the eradication event
+- Key to gaining confidence the attacker no longer has access to the environment after the eradication event
+- Often requires deploying new tooling to gain visibility of systems the attacker compromised 
+
+### Harden the environment 
+- Map out attack paths used by the attacker and weaknesses in the environment 
+- Identify targeted improvements to prevent the attacker immediately re-gaining access to the environment 
+  - focus on preventing the attacker using the same or similar attacks to gain initial access 
+  - focus on preventing the attacker using other common methods (e.g. phishing, compromised credentials)
+- Identify targeted improvements to prevent the attacker achieving their objectives if they re-gain access 
+  - focus on preventing the attacker using the same or similar attack paths to reach their objectives (e.g. segmenting POS terminals)
+- Implement any planned improvements that will not tip-off the attacker  
+- Plan to implement all other hardening activities during the eradication event 
+
+### Plan "eradication event"
 - Prepare for an ‘eradication event’ to remove the attacker from the environment
-- Implement early any planned improvements that will not tip-off the attacker
+- Develop an "Eradication event criteria"
+- Prepare for reactive containment actions if required to prevent the attacker compromising critical assets, taking destructive actions or stealing sensitive data.  
 
-### Eradication 
-- Remove attacker access to the environment in a single coordinated event
-- Prevent the attacker from quickly re-gaining access to the environment by:
-  - using the same or similar attacks (if it was identified how the attacker initially gained access)
-  - using other common methods (e.g. phishing, compromised credentials)
-- Prevent the attacker using the same or similar attack paths to reach their objectives (e.g. segmenting POS terminals)
+### Execute "eradication event"
+- Remove attacker access to the environment in a single coordinated event (known and unknown) 
+- Perform remaining hardening activities during the eradication event 
 
-### Hardening 
-- Reduce risk of further repeat attacks by the attacker in the short- / medium-term by delivering tactical improvements targeted at: 
+### Deliver tactical improvements 
+- Reduce risk of further repeat attacks by the attacker in the short- / medium-term by delivering tactical improvements
+- Target improvements at: 
   - Preventing the attacker from re-gaining access to the environment
   - Detecting the attacker if they re-gain access to the environment
   - Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
 
-### Containment 
-- Reactively take actions to prevent the attacker compromising critical assets, taking destructive actions or stealing sensitive data.  
+## Key considerations for remediating from an incident 
 
 Against a motivated and targeted attacker failure to perform each of the following, will likely result in the eradication not being successful (with the attacker maintaining access and embedding deeper in the network):
 - identify all attacker access; 
-- improve detection capabilities; and,
+- improve detection capabilities so that all attacker activity is detected; and,
 - implement sufficient improvements to prevent the attacker from quickly re-gaining access to the environment. 
 
-# Planning for an eradication event 
+## Planning for an eradication event 
 
 Effective remediation events need to be planned and coordinated. 
 
-## Eradication event planning checklist
+### Eradication event planning checklist
 - [ ] Identified date
 - [ ] Setup out of band communications and collaboration methods
 - [ ] "Eradication event criteria" have been defined
@@ -68,7 +74,17 @@ Effective remediation events need to be planned and coordinated.
 - [ ] Key activities from plans have been documented and tested
 - [ ] Business impact assessed and managed  
 
-# Remediating external cyber attacks
+## Key considerations for delivering tactical improvements 
+
+Planning and mobilising programmes to deliver such rapid risk reduction.
+
+1. Understand the organisation’s vulnerability to the threat (attack path analysis)
+2. Identify pragmatic and threat-focused actions to remediate vulnerabilities
+3. Develop and deliver a programme focused on rapid risk reduction
+4. Validate and measure progress at reducing risk
+5. Address root-causes of vulnerabilities with strategic transformation programmes
+
+### Checklist for remediating from external cyber attacks 
 
 Checklist of key actions to take organised around remediation objectives (by no means comprehensive, but I find these a helpful list of actions to sense check plans!)
 
