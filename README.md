@@ -39,11 +39,10 @@ Key remediation steps:
 ### Harden the environment 
 - Map out attack paths used by the attacker and weaknesses in the environment 
 - Identify targeted improvements to prevent the attacker immediately re-gaining access to the environment 
-  - focus on preventing the attacker using the same or similar attacks to gain initial access 
-  - focus on preventing the attacker using other common methods (e.g. phishing, compromised credentials)
-- Identify targeted improvements to prevent the attacker achieving their objectives if they re-gain access 
-  - focus on preventing the attacker using the same or similar attack paths to reach their objectives (e.g. segmenting POS terminals)
-- Implement any planned improvements that will not tip-off the attacker  
+  - using the same or similar attacks to gain initial access (e.g. patching external vulnerabilities)
+  - using other common methods (e.g. phishing, compromised credentials)
+- Identify targeted improvements to prevent the attacker achieving their objectives using the same or similar attack paths  if they re-gain access to the environment(e.g. segmenting POS terminals)
+- Plan and implement any improvements that will not tip-off the attacker  
 - Plan to implement all other hardening activities during the eradication event 
 
 ### Plan "eradication event"
@@ -119,6 +118,13 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 3. Develop and deliver a programme focused on rapid risk reduction
 4. Validate and measure progress at reducing risk
 5. Address root-causes of vulnerabilities with strategic transformation programmes
+
+### Example projects to stand-up
+
+- Active Directory hygiene (e.g. secure the use of Domain Admin accounts, set strong passwords on service accounts)
+- IT hygiene (e.g. patch workstations and servers, deploy LAPS)
+- Security tooling deployment (e.g. deploy EDR, deploy Azure ATP, deploy Windows Defender ATP)
+- Detection uplift (e.g. onboard Windows Event logs to SIEM, write custom detection rules, write detection alert playbooks)
 
 ## Checklist for remediating from external cyber attacks 
 
