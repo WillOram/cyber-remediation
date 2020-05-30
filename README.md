@@ -24,7 +24,9 @@ Quick-reference notes I use when remediating from major cyber incidents. Loosely
 1. [Prevent the attacker from re-gaining access to the environment](#prevent-the-attacker-from-re-gaining-access-to-the-environment)  
 2. [Detect the attacker if they re-gain access to the environment](#detect-the-attacker-if-they-re-gain-access-to-the-environment)  
 3. [Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment](#limiting-the-attacker-s-ability-to-achieve-their-objectives-if-they-re-gain-access-to-the-environment)  
-    
+
+# Performing successful remediations 
+
 ## Remediation objectives
 
 Remediation has three key objectives:
@@ -74,6 +76,8 @@ Key remediation steps:
   - Detecting the attacker if they re-gain access to the environment
   - Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
 
+# Executing eradication events 
+
 ## Planning for an eradication event 
 
 Effective remediation events need to be planned and coordinated. 
@@ -114,6 +118,8 @@ Effective remediation events need to be planned and coordinated.
 - [ ] Reset service account passwords 
 - [ ] Reset user account passwords (change on next logon?)
 - [ ] Audit MFA tokens issued
+
+# Delivering tactical improvements 
 
 ## Key considerations for delivering tactical improvements 
 
