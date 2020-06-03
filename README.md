@@ -81,7 +81,7 @@ Against a motivated and targeted attacker failure to perform each of the followi
 - Feed requirements into strategic cyber security programmes / IT modernisation plans 
 
 ### Building a sustainable response
-- Building a sustainable detection and response capability  
+- Build a sustainable detection and response capability  
 - Continue to deliver targeted improvements at pace
 - Identify and address root-cause issues that allowed the attack to happen
 
