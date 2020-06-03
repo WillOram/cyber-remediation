@@ -218,9 +218,9 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Deploy an advance endpoint agent (EPP/EDR) to detect suspicious activity on all systems using behavioural analytics
 - [ ] Add rules to endpoint agent (EPP/EDR) to detect the tools and techniques commonly used by the attackers
 - [ ] Collect and monitor logs from servers (WEVTs with enhanced configuration, Sysmon) and security tooling (prioritise domain controllers / consider going further with using Sysmon for domain controllers)
-- [ ] Deploy / upgrade AV to ensure AMSI capabilities to detect malicious use of PowerShell 
+- [ ] Deploy / upgrade AV to ensure AMSI capabilities to detect malicious use of PowerShell and VBA (macros)
 - [ ] Deploy file integrity monitoring on web servers to detect web shells and malicious code 
-- [ ] Enable enhanced PowerShell logging (e.g. Scipt-block logging)
+- [ ] Enable enhanced PowerShell logging (e.g. Script block logging)
 
 #### Compromise of privileged accounts
 - [ ] Detect anomalous use of user accounts for remote access
