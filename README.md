@@ -13,7 +13,7 @@ Quick-reference notes I use when remediating from major cyber incidents. Loosely
 3. [Plan "eradication event"](#plan--eradication-event-)  
 4. [Execute "eradication event"](#execute--eradication-event-)  
 5. [Deliver tactical improvements](#deliver-tactical-improvements)  
-6. [Build a sustainable response](#Build-a-sustainable-response)
+6. [Building a sustainable response](#Building-a-sustainable-response)
 
 ## Executing eradication events 
 [Planning for an eradication event](#planning-for-an-eradication-event)  
