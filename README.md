@@ -13,6 +13,7 @@ Quick-reference notes I use when remediating from major cyber incidents. Loosely
 3. [Plan "eradication event"](#plan--eradication-event-)  
 4. [Execute "eradication event"](#execute--eradication-event-)  
 5. [Deliver tactical improvements](#deliver-tactical-improvements)  
+6. [Build a sustainable response](#Build-a-sustainable-response)
 
 ## Executing eradication events 
 [Planning for an eradication event](#planning-for-an-eradication-event)  
@@ -79,6 +80,11 @@ Against a motivated and targeted attacker failure to perform each of the followi
   - Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
 - Feed requirements into strategic cyber security programmes / IT modernisation plans 
 
+### Build a sustainable response
+- Build a sustainable detection and response capability  
+- Continue to deliver targeted improvements at pace
+- Identify and address root-cause issues that allowed the attack to happen
+
 # Executing eradication events 
 
 ## Planning for an eradication event 
@@ -122,6 +128,20 @@ Effective remediation events need to be planned and coordinated.
 - [ ] Reset user account passwords (change on next logon?)
 - [ ] Audit MFA tokens issued
 
+# Uplifting detection capabilities 
+
+TO BE DONE
+
+EDR
+
+Domain Controllers + Windows Event Logs + Powershell logging + DNS logging + Sysmon + Cloud SIEM
+
+VPN
+
+O365
+
+AV
+
 # Delivering tactical improvements 
 
 ## Key considerations for delivering tactical improvements 
@@ -138,6 +158,9 @@ Planning and mobilising programmes to deliver such rapid risk reduction.
 
 - Active Directory hygiene (e.g. secure the use of Domain Admin accounts, set strong passwords on service accounts)
 - IT hygiene (e.g. patch workstations and servers, deploy LAPS)
+- Secure administration
+- Harden workstation and server configuration
+- Harden email and web filtering 
 - Security tooling deployment (e.g. deploy EDR, deploy Azure ATP, deploy Windows Defender ATP)
 - Detection uplift (e.g. onboard Windows Event logs to SIEM, write custom detection rules, write detection alert playbooks)
 
@@ -173,12 +196,14 @@ The following actions cannot be taken in isolation to be effective, they require
 - [ ] Configure web filtering tools to restrict file-types users can download from the internet and scan files for malicious content 
 - [ ] Configure web filtering tools to block domains registered within the last two weeks
 - [ ] Prevent untrusted Microsoft Office macros from being run by users on workstations 
-- [ ] Restrict the use of PowerShell on workstations
+- [ ] Restrict the use of PowerShell on workstations (Constrained Language mode + disable PowerShell v2)
 - [ ] Restrict scripts files that can be executed on workstations (e.g. HTA, and CHM files) 
 - [ ] Restrict executables that can be executed on workstations (e.g. based on location, trust, whitelisting)
 - [ ] Deploy tooling to detect and block / flag suspicious emails using advanced analytics (e.g. O365 ATP)
 - [ ] Deploy tooling so that it is easy for employees to report suspicious emails 
 - [ ] Deploy / upgrade AV to ensure common commodity malware infections are prevented and contained
+- [ ] Remove administrator rights from standard users on workstations
+- [ ] Enable Windows 10 security features such as Attack Surface Reduction and Credential Guard
 
 #### Weak or compromised credentials being exploited 
 - [ ] Roll out multi-factor authentication for all authentication to external-facing / cloud applications (e.g. email, Salesforce)
@@ -192,11 +217,16 @@ The following actions cannot be taken in isolation to be effective, they require
 #### Attacker activity on workstations or servers 
 - [ ] Deploy an advance endpoint agent (EPP/EDR) to detect suspicious activity on all systems using behavioural analytics
 - [ ] Add rules to endpoint agent (EPP/EDR) to detect the tools and techniques commonly used by the attackers
-- [ ] Collect and monitor logs from servers (WEVTs with enhanced configuration, Sysmon) and security tooling
+- [ ] Collect and monitor logs from servers (WEVTs with enhanced configuration, Sysmon) and security tooling (prioritise domain controllers / consider going further with using Sysmon for domain controllers)
 - [ ] Deploy / upgrade AV to ensure AMSI capabilities to detect malicious use of PowerShell 
 - [ ] Deploy file integrity monitoring on web servers to detect web shells and malicious code 
+- [ ] Enable enhanced PowerShell logging (e.g. Scipt-block logging)
 
-#### Detect command and control traffic
+#### Compromise of privileged accounts
+- [ ] Detect anomalous use of user accounts for remote access
+- [ ] Detect anomalous use of administrator and service accounts
+
+#### Command and control traffic
 - [ ] Collect and monitor logs from VPN and authentication services (Azure Sentinel)(geo, impossible logons, privileged accounts) 
 - [ ] Deploy cloud web filtering capabilities to detect and prevent malicious web traffic on-prem and off-prem (e.g. download of PowerShell scripts)
 - [ ] Restrict servers' access to the internet to whitelisted services, detect on traffic to other destinations 
@@ -205,27 +235,27 @@ The following actions cannot be taken in isolation to be effective, they require
 ### Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
 
 #### Escalate privileges
-- [ ] Remove administrator rights from standard users on workstations
 - [ ] Remediate vulnerabilities on workstation and server builds 
-- [ ] Use a local admin password solution to set strong passwords for all local admin accounts on workstations and servers  - [ ] Audit and identify owners for all Active Directory accounts 
+- [ ] Use a local admin password solution to set unique random  passwords for all local admin accounts on workstations and servers (e.g. LAPS)
+- [ ] Audit and identify owners for all Active Directory accounts 
 - [ ] Set strong passwords on all service accounts, domain administrator accounts and privileged accounts 
 - [ ] Prevent domain administrator accounts from logging into servers and workstations 
 - [ ] Prevent standard user accounts from being able to log into servers 
-- [ ] Enforce the use of dedicated for administration and not shared between users
+- [ ] Enforce the use of dedicated accounts for administration and not shared between users
 - [ ] Deploy privileged access management (PAM) tooling to enforce multi-factor authentication for the use of admin accounts 
 - [ ] Ensure that domain admin accounts are only used on hardened administration systems or within PAM session management 
 - [ ] Limit the accounts in the local administrator groups of workstations and servers
 - [ ] Limit the accounts in the remote desktop groups of workstations and servers
-- [ ] Restrict how service accounts are used
+- [ ] Restrict how service accounts are used (disable interactive logon privileges) 
 - [ ] Implement Windows ATA / Azure ATP to detect and respond to advanced attacks on AD and its identities.
+- [ ] Identify and remove old accounts with passwords set to not expire
 
 #### Move laterally
 - [ ] Limit what workstations can access on the internal network 
-- [ ] Detect anomalous use of user accounts for remote access
-- [ ] Detect anomalous use of administrator and service accounts
 - [ ] Patch vulnerabilities on endpoints, applications and appliances and segmenting systems that cannot be patched;
 - [ ] Restrict access to high-risk networks with bastion hosts
 - [ ] Limit network access to systems and databases hosting critical applications
+- [ ] Validate all Active Directory domain trusts 
 
 #### Compromise sensitive data 
 - [ ] Deploy tooling to enforce multi factor authentication for access to critical applications
