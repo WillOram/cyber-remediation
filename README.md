@@ -13,7 +13,7 @@ Quick-reference notes I use when remediating from major cyber incidents. Loosely
 3. [Plan "eradication event"](#plan--eradication-event-)  
 4. [Execute "eradication event"](#execute--eradication-event-)  
 5. [Deliver tactical improvements](#deliver-tactical-improvements)  
-6. [Building a sustainable response](#Building-a-sustainable-response)
+6. [Build a sustainable response](#Build-a-sustainable-response)
 
 ## Executing eradication events 
 [Planning for an eradication event](#planning-for-an-eradication-event)  
@@ -80,7 +80,7 @@ Against a motivated and targeted attacker failure to perform each of the followi
   - Limiting the attacker’s ability to achieve their objectives if they re-gain access to the environment
 - Feed requirements into strategic cyber security programmes / IT modernisation plans 
 
-### Building a sustainable response
+### Build a sustainable response
 - Build a sustainable detection and response capability  
 - Continue to deliver targeted improvements at pace
 - Identify and address root-cause issues that allowed the attack to happen
