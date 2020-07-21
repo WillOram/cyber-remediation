@@ -61,6 +61,7 @@ Against a motivated and targeted attacker failure to perform each of the followi
 - Focus on quick-win improvements and identifying pragmatic actions 
 - Plan and implement any improvements that will not tip-off the attacker  
 - Plan to implement all other hardening activities during the eradication event 
+- Focus on developing the minimum list of actions required to achieve objectives
 
 ### Plan "eradication event"
 - Prepare for an ‘eradication event’ to remove the attacker from the environment
@@ -112,7 +113,7 @@ Effective remediation events need to be planned and coordinated.
 ## Removing attacker access to the environment 
 
 ### Remove known access
-- [ ] Remove malware (executables, configuration files, temporary files, persistence methods, web shells)
+- [ ] Remove attacker tools and backdoors (executables, configuration files, temporary files, persistence methods, web shells)
 - [ ] Block known bad IPs (onprem / offprem)
 - [ ] Block known bad domains (sinkhole?)
 - [ ] Block known bad hashes from executing
